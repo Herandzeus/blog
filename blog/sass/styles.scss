@@ -1,8 +1,25 @@
-
 $primary-color: #2f7d6d;
 $secondary-color: #ad2e4d;
 $text-color: #555555;
 
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+
+// Mixin button
+
+@mixin button($color) {
+  background-color: $color;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -41,7 +58,6 @@ header {
   }
 }
 
-
 nav ul {
   list-style: none;
   padding: 0;
@@ -62,7 +78,6 @@ nav ul {
   }
 }
 
-
 section {
   margin-bottom: 20px;
   
@@ -77,7 +92,6 @@ section {
     margin-left: 20px;
   }
 }
-
 
 footer {
   background-color: $secondary-color;
@@ -97,7 +111,6 @@ body {
   background-color: #222;
   color: white;
 }
-
 
 .dropdown-menu {
   display: none;
@@ -120,6 +133,7 @@ body {
     display: block;
   }
 }
+
 .panel-item {
   position: relative;
 
@@ -141,4 +155,9 @@ body {
   &:hover::after {
     opacity: 0.7;
   }
+}
+
+// Kullanım Örneği
+.my-button {
+  @include button($primary-color);
 }
