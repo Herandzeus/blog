@@ -1,20 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ana Sayfa</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    html, body {
-      height: 100%;
-    }
-
-    video {
-      position: fixed;
-      top: 0;
-      left: 0;
-      min-width: 100%;
-      min-height: 100%;
-      z-index: -1;
+    .carousel-item img {
+      height: 400px;
+      object-fit: cover;
     }
   </style>
 </head>
@@ -68,6 +63,45 @@
       </div>
     </div>
   </nav>
+
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="slider1.jpg" alt="Slider 1">
+        <div class="carousel-caption">
+          <h3>Slider 1 Başlık</h3>
+          <p>Slider 1 Açıklama</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="slider2.jpg" alt="Slider 2">
+        <div class="carousel-caption">
+          <h3>Slider 2 Başlık</h3>
+          <p>Slider 2 Açıklama</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="slider3.jpg" alt="Slider 3">
+        <div class="carousel-caption">
+          <h3>Slider 3 Başlık</h3>
+          <p>Slider 3 Açıklama</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 
   <div class="container mt-5">
     <h1 class="text-center">Benim Dünyam</h1>
