@@ -6,18 +6,8 @@
   <title>Ana Sayfa</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    .carousel-item img {
-      height: 400px;
-      object-fit: cover;
-    }
-  </style>
 </head>
 <body>
-  <video autoplay loop muted>
-    <source src="video.mp4" type="video/mp4">
-  </video>
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
       <a class="navbar-brand" href="#">Ana Sayfa</a>
