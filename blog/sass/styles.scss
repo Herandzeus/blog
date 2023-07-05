@@ -1,5 +1,8 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
 
+// Define a variable for the background image URL
+$background-image-url: "background.jpg";
+
 html, body {
   height: 100%;
 }
@@ -77,4 +80,11 @@ video {
     font-size: 18px;
     padding: 12px 30px;
   }
+}
+
+// Set the background image
+body {
+  background-image: url($background-image-url);
+  background-size: cover;
+  background-position: center;
 }
