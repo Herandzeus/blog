@@ -1,77 +1,122 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
 
-// Define variables
-$primary-color: #2f7d6d;
-$secondary-color: #ad2e4d;
-
-// Mixins
-@mixin button-style {
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 16px;
+//mixin   
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
 }
 
-// Navbar styles
+//variables
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$success-color: #28a745;
+$info-color: #17a2b8;
+$warning-color: #ffc107;
+$danger-color: #dc3545;
+$light-color: #f8f9fa;
+$dark-color: #343a40;
+$breakpoint: 576px;
+
+//body
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: $light-color;
+}
+
+//navbar
 .navbar {
-  background-color: #343a40;
-}
-
-.navbar-brand {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-}
-
-.nav-link {
-  color: white;
-}
-
-.dropdown-menu {
-  background-color: #343a40;
-
-  .dropdown-item {
-    color: white;
-  }
-}
-
-// Container styles
-.container {
-  margin-top: 80px;
-  text-align: center;
-
-  h1 {
-    color: $primary-color;
-    font-size: 42px;
-    font-style: italic;
-    margin-bottom: 20px;
-  }
-
-  p {
-    color: white;
-    font-size: 20px;
-    font-style: italic;
-    margin-bottom: 10px;
-  }
-
-  .btn-primary {
     background-color: $primary-color;
-    border-color: $primary-color;
-    font-size: 18px;
-    padding: 12px 30px;
-  }
-
-  .btn-secondary {
-    background-color: $secondary-color;
-    border-color: $secondary-color;
-    color: white;
-    font-size: 18px;
-    padding: 12px 30px;
-  }
+    color: $light-color;
+    .nav-link {
+        color: $light-color;
+        &:hover {
+            color: $light-color;
+        }
+    }
 }
 
-// Media queries for responsiveness
-@media (max-width: 768px) {
-  .container {
-    padding: 20px;
-  }
+//header
+.header {
+    background-color: $primary-color;
+    color: $light-color;
+    padding: 2rem 0;
+    .header-title {
+        font-size: 3rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .header-subtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+//main
+.main {
+    padding: 2rem 0;
+    .main-title {
+        font-size: 2rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .main-subtitle {
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+    }
+    .main-content {
+        padding: 2rem 0;
+        .main-content-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        .main-content-subtitle {
+            font-size: 1rem;
+            font-weight: 500;
+            text-align: center;
+        }
+    }
+}
+
+//footer
+.footer {
+    background-color: $primary-color;
+    color: $light-color;
+    padding: 2rem 0;
+    .footer-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-align: center;
+    }
+    .footer-subtitle {
+        font-size: 1rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+//media queries
+@media (max-width: $breakpoint) {
+    .header {
+        padding: 1rem 0;
+        .header-title {
+            font-size: 2rem;
+        }
+        .header-subtitle {
+            font-size: 1rem;
+        }
+    }
+    .footer {
+        padding: 1rem 0;
+        .footer-title {
+            font-size: 1rem;
+        }
+        .footer-subtitle {
+            font-size: 0.75rem;
+        }
+    }
 }

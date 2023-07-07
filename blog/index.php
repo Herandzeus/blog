@@ -53,6 +53,7 @@
       </div>
     </div>
   </nav>
+  
 
   <div class="container mt-5">
     <h1 class="text-center">Benim Dünyam</h1>
@@ -62,6 +63,7 @@
     <div class="text-center">
       <a href="login.php" class="btn btn-primary">Giriş Yap</a>
       <a href="register.php" class="btn btn-secondary">Kayıt Ol</a>
+      <button class="btn btn-danger">Önerileri Keşfet</button>
     </div>
   </div>
 
