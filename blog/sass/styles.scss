@@ -1,67 +1,17 @@
 @import url("https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css");
 
-// Define a variable for the background image URL
-$background-image-url: "background.jpg";
+// Define variables
+$primary-color: #2f7d6d;
+$secondary-color: #ad2e4d;
 
-html, body {
-  height: 100%;
-}
-
-.carousel-item {
-  height: 100vh; 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  img {
-    object-fit: cover;
-    object-position: center;
-    width: 100%;
-    height: 100%;
-  }
-}
-
-
+// Mixins
 @mixin button-style {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 16px;
 }
 
-.button {
-  @include button-style;
-  background-color: blue;
-  color: white;
-}
-
-// Nesting ve Modül örneği
-.container {
-  background-color: #f2f2f2;
-  padding: 20px;
-
-  .title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-
-  .content {
-    margin-top: 10px;
-
-    p {
-      color: #333;
-      line-height: 1.5;
-    }
-
-    .button {
-      @include button-style;
-      background-color: green;
-      color: white;
-      margin-top: 20px;
-    }
-  }
-}
-
+// Navbar styles
 .navbar {
   background-color: #343a40;
 }
@@ -84,22 +34,13 @@ html, body {
   }
 }
 
-.carousel-item {
-  height: 400px; // Slider yüksekliği
-}
-
-.carousel-item img {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
+// Container styles
 .container {
   margin-top: 80px;
   text-align: center;
 
   h1 {
-    color: #2f7d6d;
+    color: $primary-color;
     font-size: 42px;
     font-style: italic;
     margin-bottom: 20px;
@@ -113,41 +54,24 @@ html, body {
   }
 
   .btn-primary {
-    background-color: #2f7d6d;
-    border-color: #2f7d6d;
+    background-color: $primary-color;
+    border-color: $primary-color;
     font-size: 18px;
     padding: 12px 30px;
   }
 
   .btn-secondary {
-    background-color: #ad2e4d;
-    border-color: #ad2e4d;
+    background-color: $secondary-color;
+    border-color: $secondary-color;
     color: white;
     font-size: 18px;
     padding: 12px 30px;
   }
 }
 
-#about {
-  background-color: #343a40;
-  padding: 50px 0;
-
-  h1 {
-    color: #2f7d6d;
-    font-size: 42px;
-    font-style: italic;
-    margin-bottom: 20px;
+// Media queries for responsiveness
+@media (max-width: 768px) {
+  .container {
+    padding: 20px;
   }
-
-  p {
-    color: white;
-    font-size: 20px;
-    font-style: italic;
-    margin-bottom: 10px;
-  }
-}
-body {
-  background-image: url($background-image-url);
-  background-size: cover;
-  background-position: center;
 }
